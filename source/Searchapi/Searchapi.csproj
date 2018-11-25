@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
+        <UserSecretsId>Codesearchd9b357fd-01f0-46bc-948e-4707ccda1122</UserSecretsId>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="../shared/Database/**/*.cs" />
+        <Compile Include="../shared/Model/**/*.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="wwwroot/" />
+    </ItemGroup>
+    <ItemGroup>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />    
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="3.0.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Inkton.NesterWorks" Version="1.6.1" />
+    </ItemGroup>
+</Project>

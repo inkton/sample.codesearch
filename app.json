@@ -1,0 +1,433 @@
+{
+    "id": 9036,
+    "site_id": 1,
+    "user_id": 8901,
+    "tree_id": 9214,
+    "primary_domain_id": 175,
+    "type": "uniflow",
+    "status": "assigned",
+    "version": "v2",
+    "tag": "codesearch",
+    "name": "Code Search Engine",
+    "network_password": "codesearch8888",
+    "services_password": "codesearch8888",
+    "backup_freq": "daily",
+    "backup_hour": 8,
+    "created_at": "2018-11-02 15:59:06",
+    "updated_at": "2018-11-03 12:46:03",
+    "deleted_at": null,
+    "app_service_tier_id": 14,
+    "ip_address": "63.32.81.249",
+    "site": {
+        "id": 1,
+        "tag": "nest",
+        "name": "nest.yt",
+        "deleted_at": null,
+        "created_at": null,
+        "updated_at": null
+    },
+    "tree": {
+        "id": 9214,
+        "forest_id": 23,
+        "tag": "redbud-1541249163",
+        "name": "Nest host redbud-1541249163",
+        "zone": "eu-west-1a",
+        "services": "single_tenant",
+        "memory_gb": 0,
+        "internal_ip": "172.26.0.143",
+        "external_ip": "63.32.81.249",
+        "usage": "0.00",
+        "created_at": "2018-11-03 12:46:03",
+        "updated_at": "2018-11-03 12:46:03",
+        "deleted_at": null,
+        "forest": {
+            "id": 23,
+            "tag": "glendalough",
+            "name": "Glendalough Forest",
+            "region": "dublin",
+            "territory": "IE",
+            "continent": "EU",
+            "plantable": 1,
+            "kind": "redbud",
+            "created_at": null,
+            "updated_at": null,
+            "deleted_at": null
+        }
+    },
+    "user": {
+        "id": 8901,
+        "email": "john@nest.yt",
+        "activation_code": null,
+        "persist_code": "$2y$10$e2EysgGhSKrSvDV6HflSA.CokeFVOOOEbu93fdHesPEAtPRAS8zgq",
+        "reset_password_code": null,
+        "permissions": null,
+        "is_activated": 1,
+        "activated_at": null,
+        "last_login": "2018-11-03 12:45:44",
+        "created_at": "2017-11-11 06:10:58",
+        "updated_at": "2018-11-03 12:45:44",
+        "username": "john@nest.yt",
+        "surname": "Murphy",
+        "deleted_at": null,
+        "last_seen": "2018-11-03 12:45:44",
+        "is_guest": 0,
+        "is_superuser": 0,
+        "territory_iso_code": "AU",
+        "first_name": "John",
+        "image": null,
+        "credits_balance": "41.73",
+        "nickname": "johnny"
+    },
+    "contacts": [
+        {
+            "id": 9062,
+            "app_id": 9036,
+            "user_id": 8901,
+            "notify_updates": 1,
+            "email": "john@nest.yt",
+            "created_at": "2018-11-02 15:59:06",
+            "updated_at": "2018-11-02 15:59:06",
+            "status": "active",
+            "nickname": "johnny",
+            "first_name": "John",
+            "surname": "Murphy"
+        }
+    ],
+    "nests": [
+        {
+            "id": 9044,
+            "app_id": 9036,
+            "tag": "bitbucket",
+            "name": "Bitbucket Search",
+            "status": "active",
+            "platform_id": 3,
+            "created_at": "2018-11-02 16:01:53",
+            "updated_at": "2018-11-02 16:01:53",
+            "scale": 2,
+            "scale_size": "128m",
+            "platform": {
+                "id": 3,
+                "tag": "worker",
+                "name": "Worker",
+                "created_at": null,
+                "updated_at": null,
+                "deleted_at": null
+            },
+            "cushions": [
+                {
+                    "id": 9134,
+                    "nest_id": 9044,
+                    "inactivity_timeout": -1,
+                    "memory": "128m",
+                    "created_at": "2018-11-02 16:01:53",
+                    "updated_at": "2018-11-02 16:01:53",
+                    "index": 0
+                },
+                {
+                    "id": 9135,
+                    "nest_id": 9044,
+                    "inactivity_timeout": -1,
+                    "memory": "128m",
+                    "created_at": "2018-11-02 16:01:53",
+                    "updated_at": "2018-11-02 16:01:53",
+                    "index": 1
+                }
+            ]
+        },
+        {
+            "id": 9043,
+            "app_id": 9036,
+            "tag": "github",
+            "name": "GitHub Search",
+            "status": "active",
+            "platform_id": 3,
+            "created_at": "2018-11-02 16:00:45",
+            "updated_at": "2018-11-02 16:00:45",
+            "scale": 2,
+            "scale_size": "128m",
+            "platform": {
+                "id": 3,
+                "tag": "worker",
+                "name": "Worker",
+                "created_at": null,
+                "updated_at": null,
+                "deleted_at": null
+            },
+            "cushions": [
+                {
+                    "id": 9132,
+                    "nest_id": 9043,
+                    "inactivity_timeout": -1,
+                    "memory": "128m",
+                    "created_at": "2018-11-02 16:00:45",
+                    "updated_at": "2018-11-02 16:00:45",
+                    "index": 0
+                },
+                {
+                    "id": 9133,
+                    "nest_id": 9043,
+                    "inactivity_timeout": -1,
+                    "memory": "128m",
+                    "created_at": "2018-11-02 16:00:45",
+                    "updated_at": "2018-11-02 16:00:45",
+                    "index": 1
+                }
+            ]
+        },
+        {
+            "id": 9042,
+            "app_id": 9036,
+            "tag": "searchapi",
+            "name": "Search Endpoint",
+            "status": "active",
+            "platform_id": 2,
+            "created_at": "2018-11-02 16:00:06",
+            "updated_at": "2018-11-02 16:00:06",
+            "scale": 1,
+            "scale_size": "128m",
+            "platform": {
+                "id": 2,
+                "tag": "api",
+                "name": "WebApi App",
+                "created_at": null,
+                "updated_at": null,
+                "deleted_at": null
+            },
+            "cushions": [
+                {
+                    "id": 9131,
+                    "nest_id": 9042,
+                    "inactivity_timeout": -1,
+                    "memory": "128m",
+                    "created_at": "2018-11-02 16:00:06",
+                    "updated_at": "2018-11-02 16:00:06",
+                    "index": 0
+                }
+            ]
+        }
+    ],
+    "domains": [
+        {
+            "id": 175,
+            "app_id": 9036,
+            "tag": "codesearch-app",
+            "name": "codesearch.nestapp.yt",
+            "default": 1,
+            "aliases": null,
+            "created_at": "2018-11-02 15:59:06",
+            "updated_at": "2018-11-02 15:59:06",
+            "certificates": [
+                {
+                    "id": 272,
+                    "app_domain_id": 175,
+                    "tag": "codesearch-app",
+                    "type": "shared",
+                    "certificate_chain": "",
+                    "private_key": "",
+                    "created_at": "2018-11-02 15:59:06",
+                    "updated_at": "2018-11-02 15:59:06"
+                }
+            ]
+        }
+    ],
+    "deployments": [
+        {
+            "id": 597,
+            "app_id": 9036,
+            "forest_id": 23,
+            "status": "updating",
+            "software_framework_version_id": 3,
+            "alerts": null,
+            "created_at": "2018-11-03 12:44:55",
+            "updated_at": "2018-11-03 12:44:55"
+        }
+    ],
+    "service_subscriptions": [
+        {
+            "id": 1060,
+            "app_id": 9036,
+            "app_service_tier_id": 14,
+            "status": "active",
+            "created_at": "2018-11-03 12:44:38",
+            "updated_at": "2018-11-03 12:44:38",
+            "app_service_tier": {
+                "id": 14,
+                "app_service_id": 7,
+                "tag": "redbud-1-0",
+                "name": "tier_1",
+                "type": "dedicated",
+                "period": "month",
+                "item_cost": "19.00",
+                "features_included": "[1, 512, 20, 1024, \"auto\", \"yes\", \"yes\", \"yes\", \"yes\", \"yes\", \"yes\", \"yes\", 1]",
+                "deleted_at": null,
+                "created_at": null,
+                "updated_at": null,
+                "app_service": {
+                    "id": 7,
+                    "level": "forest",
+                    "type": "app",
+                    "rules": "single_type,single_tier",
+                    "tag": "nest-redbud",
+                    "name": "Nest Redbud",
+                    "description": "An AWS Service",
+                    "features_all": "[\"cpu\", \"memory_mb\", \"drive_ssd_gb\", \"bandwidth_gb_month\", \"backup\", \"metrics\", \"api\", \"team_management\", \"mobile_desktop_console\", \"development_kit\", \"scalable\", \"flexible\", \"users\"]",
+                    "port": 5000,
+                    "host": "",
+                    "deleted_at": null,
+                    "created_at": null,
+                    "updated_at": null
+                }
+            }
+        },
+        {
+            "id": 1061,
+            "app_id": 9036,
+            "app_service_tier_id": 300,
+            "status": "active",
+            "created_at": "2018-11-03 12:44:38",
+            "updated_at": "2018-11-03 12:44:38",
+            "app_service_tier": {
+                "id": 300,
+                "app_service_id": 3,
+                "tag": "git-tier-1",
+                "name": "tier_1",
+                "type": "dedicated",
+                "period": "month",
+                "item_cost": "0.00",
+                "features_included": "[\"yes\", \"yes\", \"yes\"]",
+                "deleted_at": null,
+                "created_at": null,
+                "updated_at": null,
+                "app_service": {
+                    "id": 3,
+                    "level": "tree",
+                    "type": "track",
+                    "rules": "single_tier,one_free_tier",
+                    "tag": "git",
+                    "name": "Git",
+                    "description": "A description",
+                    "features_all": "[\"configured\", \"managed\", \"backup\"]",
+                    "port": 0,
+                    "host": "",
+                    "deleted_at": null,
+                    "created_at": null,
+                    "updated_at": null
+                }
+            }
+        },
+        {
+            "id": 1062,
+            "app_id": 9036,
+            "app_service_tier_id": 500,
+            "status": "active",
+            "created_at": "2018-11-03 12:44:38",
+            "updated_at": "2018-11-03 12:44:38",
+            "app_service_tier": {
+                "id": 500,
+                "app_service_id": 5,
+                "tag": "logging-tier-1",
+                "name": "tier_1",
+                "type": "dedicated",
+                "period": "month",
+                "item_cost": "0.00",
+                "features_included": "[\"yes\", \"yes\", \"yes\"]",
+                "deleted_at": null,
+                "created_at": null,
+                "updated_at": null,
+                "app_service": {
+                    "id": 5,
+                    "level": "tree",
+                    "type": "monitor",
+                    "rules": "single_tier,one_free_tier",
+                    "tag": "logging",
+                    "name": "Logging",
+                    "description": "A description",
+                    "features_all": "[\"configured\", \"managed\", \"backup\"]",
+                    "port": 0,
+                    "host": "",
+                    "deleted_at": null,
+                    "created_at": null,
+                    "updated_at": null
+                }
+            }
+        },
+        {
+            "id": 1063,
+            "app_id": 9036,
+            "app_service_tier_id": 400,
+            "status": "active",
+            "created_at": "2018-11-03 12:44:38",
+            "updated_at": "2018-11-03 12:44:38",
+            "app_service_tier": {
+                "id": 400,
+                "app_service_id": 4,
+                "tag": "rabbitmq-tier-1",
+                "name": "tier_1",
+                "type": "dedicated",
+                "period": "month",
+                "item_cost": "0.00",
+                "features_included": "[\"yes\", \"yes\", \"yes\"]",
+                "deleted_at": null,
+                "created_at": null,
+                "updated_at": null,
+                "app_service": {
+                    "id": 4,
+                    "level": "tree",
+                    "type": "batch",
+                    "rules": "single_tier,one_free_tier",
+                    "tag": "rabbitmq",
+                    "name": "Rabbit MQ",
+                    "description": "A description",
+                    "features_all": "[\"configured\", \"managed\", \"backup\"]",
+                    "port": 0,
+                    "host": "",
+                    "deleted_at": null,
+                    "created_at": null,
+                    "updated_at": null
+                }
+            }
+        },
+        {
+            "id": 1064,
+            "app_id": 9036,
+            "app_service_tier_id": 600,
+            "status": "active",
+            "created_at": "2018-11-03 12:44:38",
+            "updated_at": "2018-11-03 12:44:38",
+            "app_service_tier": {
+                "id": 600,
+                "app_service_id": 6,
+                "tag": "letsencrypt-tier-1",
+                "name": "tier_1",
+                "type": "dedicated",
+                "period": "month",
+                "item_cost": "0.00",
+                "features_included": "[\"yes\", \"yes\"]",
+                "deleted_at": null,
+                "created_at": null,
+                "updated_at": null,
+                "app_service": {
+                    "id": 6,
+                    "level": "tree",
+                    "type": "domain",
+                    "rules": "single_tier,one_free_tier",
+                    "tag": "letsencrypt",
+                    "name": "Letsencrypt",
+                    "description": "LetsEncrypt SSL",
+                    "features_all": "[\"auto_register\", \"auto_renew\"]",
+                    "port": 0,
+                    "host": "",
+                    "deleted_at": null,
+                    "created_at": null,
+                    "updated_at": null
+                }
+            }
+        }
+    ],
+    "tree_keeper": {
+        "external_ip": "5.9.29.111",
+        "internal_ip": "",
+        "tag": "sycamore1",
+        "name": "Home HQ"
+    }
+}
