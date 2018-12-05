@@ -21,12 +21,22 @@ namespace Codesearch.Work
     public class GitRepository
     {
         private Runtime _runtime;
-        ILogger _logger;
+        private ILogger _logger;
+        private NesterQueueRPCClient _cache;
 
         public GitRepository(Runtime runtime, ILogger logger)
         {
             _runtime = runtime;
             _logger = logger;
+
+            _cache = _runtime.QueueClient.CreateRPCEndpoint(
+                _runtime.GetNest("cache"));
+            _cache.TimedOut += CacheTimedOutHandler;            
+        }
+
+        private void CacheTimedOutHandler(object sender, EventArgs e)
+        {
+            _logger.LogError("Cache timeout");
         }
 
         public async Task<SearchResult> SearchAsync(SearchQuery query)
@@ -49,11 +59,12 @@ namespace Codesearch.Work
                         string data = await content.ReadAsStringAsync();
                         if (data != null)
                         {
-                            result.Id = query.Id;
-                            result.Service = query.Service;
+                            result.SearchQueryId = query.Id;
+                            result.Service = "github";
                             result.HandledBy = _runtime.ComponentId;
                             result.Data = data;
-                            return result;
+
+                            return CacheResult(result);
                         }
                     }
                 }
@@ -61,5 +72,14 @@ namespace Codesearch.Work
             
             return null;
         }
-    }
+
+        private SearchResult CacheResult(SearchResult searchResult)
+        {
+            byte[] result = _cache.Call("CacheResult", Encoding.UTF8.GetBytes(
+                JsonConvert.SerializeObject(searchResult)));
+
+            return JsonConvert.DeserializeObject<SearchResult>(
+                                Encoding.UTF8.GetString(result));
+        }          
+    }  
 }

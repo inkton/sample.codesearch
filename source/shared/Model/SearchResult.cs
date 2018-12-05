@@ -5,7 +5,8 @@ namespace Codesearch.Model
 {
     public class SearchResult : CloudObject
     {
-        private string _id;
+        private int _id;
+        private int _searchQueryid;
         private string _service;
         private string _data;
         private string _handledBy;
@@ -14,10 +15,16 @@ namespace Codesearch.Model
         {
         }
 
-        public string Id
+        public int Id
         {
-            get { return _id; }
+            get { return _id; } 
             set { SetProperty(ref _id, value); }
+        }
+
+        public int SearchQueryId
+        {
+            get { return _searchQueryid; }
+            set { SetProperty(ref _searchQueryid, value); }
         }
 
         public string Service
@@ -40,7 +47,7 @@ namespace Codesearch.Model
 
         public override string CloudKey
         {
-            get { return Id; }
+            get { return _id.ToString(); }
         }
     }
 }

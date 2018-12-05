@@ -52,8 +52,8 @@ namespace Codesearch.Work
 
                             SearchResult result = await repo.SearchAsync(query);
 
-                            logger.LogInformation("Query Id {0} term {1} with {2}", 
-                                query.Id, query.Text, query.Service);
+                            logger.LogInformation("Query Id {0} term {1}", 
+                                query.Id, query.Text);
 
                             response = ResultFactory.CreateSingle<SearchResult>(
                                 result, 0, "Success");
