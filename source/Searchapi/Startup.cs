@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using Inkton.Nester;
+using Codesearch.Database;
 using Codesearch.Model;
 
 namespace Codesearch
@@ -30,6 +31,8 @@ namespace Codesearch
         {
             services.AddMvc();
             services.AddNester(QueueMode.Server | QueueMode.Client);
+            services.AddNesterMySQL<QueryContext>();
+            services.AddScoped<IQueryRepository, QueryRepository>();
             services.AddApiVersioning(options => 
                 {
                     options.ReportApiVersions = true;
@@ -38,18 +41,18 @@ namespace Codesearch
                     options.ApiVersionReader = new HeaderApiVersionReader("x-api-version");
                 });
             services.AddSwaggerGen(options => {
-               options.SwaggerDoc("v1", new Info { Title = "Demo Async/Sync Queues", Version = "v1" });
+               options.SwaggerDoc("v1", new Info { Title = "Demo Messages API", Version = "v1" });
             });
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app)
         {
             app.UseSwagger();
 
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("v1/swagger.json", "Demo Async/Sync Queues");
+                options.SwaggerEndpoint("v1/swagger.json", "Demo Messages API V1");
             });
 
             app.UseMvc();
@@ -57,6 +60,9 @@ namespace Codesearch
                 context.Response.Redirect("swagger/");
                 return Task.CompletedTask;
             });
+
+
+            DBinitialize.EnsureCreated(app.ApplicationServices);
         }
     }
 }

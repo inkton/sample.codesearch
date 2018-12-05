@@ -24,7 +24,7 @@ namespace Codesearch.Handle
                 .ConfigureLogging(logging =>
                 {
                     logging.AddConsole();
-                    logging.AddNesterLog(LogLevel.Debug);
+                    logging.AddNesterLog();
                 })
                 .UseStartup<Startup>();
     }
