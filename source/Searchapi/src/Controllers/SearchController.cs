@@ -14,6 +14,7 @@ using Inkton.Nest.Cloud;
 using Inkton.Nest.Model;
 using Codesearch.Model;
 using Codesearch.Database;
+//
 
 namespace Codesearch.Controllers
 {
@@ -30,7 +31,7 @@ namespace Codesearch.Controllers
         private NesterQueueRPCClient _cache;
 
         public SearchController(
-            ILogger<SearchController> logger,
+            ILogger<SearchController> logger,   
             Runtime runtime
             )
         {
@@ -101,10 +102,17 @@ namespace Codesearch.Controllers
 
         private List<SearchResult> GetCachedResults(string text)
         {
-            byte[] result = _cache.Call("GetRequest", Encoding.UTF8.GetBytes(text));
+            List<SearchResult> result = null;
 
-            return JsonConvert.DeserializeObject<List<SearchResult>>(
-                                Encoding.UTF8.GetString(result));
+            byte[] rawResult = _cache.Call("GetRequest", Encoding.UTF8.GetBytes(text));
+
+            if (rawResult != null)
+            {
+                result = JsonConvert.DeserializeObject<List<SearchResult>>(
+                                Encoding.UTF8.GetString(rawResult));
+            }
+
+            return result;
         }
 
         private SearchQuery AddQuery(string text)
@@ -116,8 +124,11 @@ namespace Codesearch.Controllers
             byte[] result = _cache.Call("AddQuery", Encoding.UTF8.GetBytes(
                 JsonConvert.SerializeObject(query)));
 
-            query = JsonConvert.DeserializeObject<SearchQuery>(
-                Encoding.UTF8.GetString(result));
+            if (result != null)
+            {
+                query = JsonConvert.DeserializeObject<SearchQuery>(
+                    Encoding.UTF8.GetString(result));
+            }
             
             return query;
         }
