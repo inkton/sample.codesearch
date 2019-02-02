@@ -76,9 +76,15 @@ namespace Codesearch.Work
         {
             byte[] result = _cache.Call("CacheResult", Encoding.UTF8.GetBytes(
                 JsonConvert.SerializeObject(searchResult)));
+            
+            if (result != null)
+            {
+                // The cache allocates and returns an id for the cached result
+                searchResult = JsonConvert.DeserializeObject<SearchResult>(
+                                    Encoding.UTF8.GetString(result));
+            }
 
-            return JsonConvert.DeserializeObject<SearchResult>(
-                                Encoding.UTF8.GetString(result));
+            return searchResult;
         }        
     }
 }

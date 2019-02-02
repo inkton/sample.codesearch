@@ -19,7 +19,8 @@ namespace Codesearch.Work
     {
         public static void Main()
         {
-            Runtime runtime = new Runtime(QueueMode.Server | QueueMode.Client);
+            Runtime runtime = new Runtime(
+                QueueMode.Server | QueueMode.Client);
 
             ILoggerFactory loggerFactory = new LoggerFactory()
                 .AddDebug(LogLevel.Debug)                
