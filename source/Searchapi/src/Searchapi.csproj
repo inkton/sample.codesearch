@@ -2,18 +2,18 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
-        <UserSecretsId>Codesearch5d0c6ee6-50a3-4d22-b815-495718722a0b</UserSecretsId>
+        <UserSecretsId>Codesearch0e390bf1-7c83-4ebc-9cad-58c16ca7ff03</UserSecretsId>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="../shared/Database/**/*.cs" />
-        <Compile Include="../shared/Model/**/*.cs" />
+        <Compile Include="../../shared/Database/**/*.cs" />
+        <Compile Include="../../shared/Model/**/*.cs" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="wwwroot/" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
-        <PackageReference Include="Inkton.NesterWorks" Version="1.6.2" />
+        <PackageReference Include="Inkton.NesterWorks" Version="1.6.4" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
@@ -25,4 +25,3 @@
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.2" />
     </ItemGroup>
 </Project>
-    

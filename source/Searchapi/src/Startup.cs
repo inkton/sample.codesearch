@@ -41,7 +41,7 @@ namespace Codesearch
                     options.ApiVersionReader = new HeaderApiVersionReader("x-api-version");
                 });
             services.AddSwaggerGen(options => {
-               options.SwaggerDoc("v1", new Info { Title = "Demo Messages API", Version = "v1" });
+               options.SwaggerDoc("v1", new Info { Title = "Demo Query API", Version = "v1" });
             });
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +52,7 @@ namespace Codesearch
 
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("v1/swagger.json", "Demo Messages API V1");
+                options.SwaggerEndpoint("v1/swagger.json", "Demo Query API V1");
             });
 
             app.UseMvc();
